@@ -81,7 +81,4 @@
       - "{{ heartbeat_config_dir }}/{{ elasticsearch_certificate_ca_file_ingest }}:/usr/share/heartbeat/{{ elasticsearch_certificate_ca_file_ingest }}:ro,Z"
       - "{{ heartbeat_data_dir }}:/usr/share/heartbeat/data:rw,Z"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "/sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro,z"
-      - "proc:/hostfs/proc:ro"
-      - "/:/hostfs:ro"
     command: "heartbeat -e -E name={{ ansible_hostname }}"
