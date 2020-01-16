@@ -2,7 +2,8 @@
 
 heartbeat_docker_image: registry.smartdigits.io/infra/heartbeat
 heartbeat_docker_tag: 7.2.0
-heartbeat_docker_security_opts: []
+heartbeat_docker_security_opts:
+  - label:type:container_runtime_t
 heartbeat_config_dir: /var/dockershared/heartbeat/config
 heartbeat_data_dir: /var/dockershared/heartbeat/data
 heartbeat_cluster_name: default
