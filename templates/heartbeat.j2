@@ -65,3 +65,7 @@ monitoring:
     ssl:
       verification_mode: none
       certificate_authorities: "/usr/share/heartbeat/{{ elasticsearch_certificate_ca_file_ingest }}"
+
+logging:
+  level: {{ heartbeat_logging_level }} 
+  selectors: '*'
