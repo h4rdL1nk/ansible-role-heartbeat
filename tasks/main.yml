@@ -93,7 +93,7 @@
 - name: Deploy heartbeat containers
   docker_container:
     state: started
-    restart: "{{ (heartbeat_config is defined and heartbeat_config.changed) or (keystore_create and keystore_create.changed) or (keystore_write and keystore_write.changed) }}"
+    restart: "{{ (heartbeat_config is defined and heartbeat_config.changed) or (keystore_create is defined and keystore_create.changed) or (keystore_write is defined and keystore_write.changed) }}"
     name: "smd_infra_heartbeat"
     user: root
     image: "{{ heartbeat_docker_image }}:{{ heartbeat_docker_tag }}"
