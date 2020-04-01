@@ -39,13 +39,11 @@
     remote_src: True
     return_content: True
     validate_certs: False
-  when: heartbeat_output_logstash
   register: cluster_uuid
   
 - name: Set cluster UUID variable
   set_fact:
     heartbeat_cluster_uuid: "{{ cluster_uuid.json.cluster_uuid }}"
-  when: heartbeat_output_logstash
 
 - name: Copy heartbeat configuration
   template:
