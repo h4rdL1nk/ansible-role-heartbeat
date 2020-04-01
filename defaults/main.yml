@@ -16,3 +16,7 @@ heartbeat_output_logstash: false
 heartbeat_monitoring_enable: false
 heartbeat_force_keystore_write: false
 heartbeat_logging_level: info
+
+heartbeat_http_enabled: False
+heartbeat_http_port: 9600
+heartbeat_http_host: 0.0.0.0
