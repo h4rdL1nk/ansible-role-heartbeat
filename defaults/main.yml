@@ -7,6 +7,7 @@ heartbeat_docker_security_opts:
 heartbeat_config_dir: /var/dockershared/heartbeat/config
 heartbeat_data_dir: /var/dockershared/heartbeat/data
 heartbeat_cluster_name: default
+heartbeat_cluster_uuid: dummy
 heartbeat_secrets_file: vault/secrets.yml
 heartbeat_setup_ilm: false
 heartbeat_setup_dashboards: false

@@ -1,3 +1,8 @@
+
+{% if heartbeat_output_logstash %}
+monitoring.cluster_uuid: "{{ heartbeat_cluster_uuid }}"
+{% endif %}
+
 heartbeat.config.monitors:
   path: ${path.config}/monitors.d/*.yml
   reload.enabled: false
