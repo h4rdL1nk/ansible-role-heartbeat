@@ -1,5 +1,7 @@
 
+{% if heartbeat_set_cluster_uuid %}
 monitoring.cluster_uuid: "{{ heartbeat_cluster_uuid }}"
+{% endif %}
 
 heartbeat.config.monitors:
   path: ${path.config}/monitors.d/*.yml
