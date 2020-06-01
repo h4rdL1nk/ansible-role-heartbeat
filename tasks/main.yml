@@ -71,7 +71,7 @@
   command: "docker run --rm -i -v {{ heartbeat_data_dir }}:/usr/share/heartbeat/data:rw,Z --user root {{ heartbeat_docker_image }}:{{ heartbeat_docker_tag }} keystore add {{ item.key }} --stdin --force"
   args:
     stdin: "{{ item.value }}"
-  with_dict: "{{ secrets.heartbeat }}"
+  with_dict: "{{ secrets.heartbeat_keystore_keys }}"
   when: keystore_create.changed or heartbeat_force_keystore_write
   register: keystore_write
   tags:
