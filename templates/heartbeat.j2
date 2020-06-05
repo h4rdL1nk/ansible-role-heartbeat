@@ -60,6 +60,10 @@ output.logstash:
   ssl:
     verification_mode: none
     certificate_authorities: ["/usr/share/heartbeat/{{ elasticsearch_certificate_ca_file_ingest }}"]
+{% if heartbeat_logstash_client_auth_enabled == "true" %}
+    certificate: "/usr/share/heartbeat/{{ heartbeat_logstash_auth_certificate }}"
+    key: "/usr/share/heartbeat/{{ heartbeat_logstash_auth_key }}"
+{% endif %}
 
 {% if heartbeat_monitoring_enable %}
 monitoring:

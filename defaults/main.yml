@@ -23,3 +23,7 @@ heartbeat_logging_level: info
 heartbeat_http_enabled: False
 heartbeat_http_port: 9600
 heartbeat_http_host: 0.0.0.0
+
+heartbeat_logstash_client_auth_enabled: false
+heartbeat_logstash_auth_certificate: instance.crt
+heartbeat_logstash_auth_key: instance.key
